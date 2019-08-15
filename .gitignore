@@ -4,7 +4,12 @@
 # User-specific files
 *.suo
 *.user
+*.userosscache
 *.sln.docstates
+*.VC.db
+
+
+# User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
 # Build results
@@ -12,21 +17,28 @@
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
-x64/
-x86/
+Main/**/x64/
+Main/**/x86/
 build/
 bld/
-[Bb]in/
+Main/**/[Bb]in/
 [Oo]bj/
+Logs/
 
-# Roslyn cache directories
-*.ide/
+# Visual Studio 2015 cache/options directory
+.vs/
+
+# Visual Studio code
+.vscode/
+
+# FAKE .NET
+.fake/
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
 
-#NUNIT
+# NUNIT
 *.VisualState.xml
 TestResult.xml
 
@@ -34,6 +46,10 @@ TestResult.xml
 [Dd]ebugPS/
 [Rr]eleasePS/
 dlldata.c
+
+# DNX
+project.lock.json
+artifacts/
 
 *_i.c
 *_p.c
@@ -86,8 +102,9 @@ $tf/
 _ReSharper*/
 *.[Rr]e[Ss]harper
 *.DotSettings.user
+*.DotSettings
 
-# JustCode is a .NET coding addin-in
+# JustCode is a .NET coding add-in
 .JustCode
 
 # TeamCity is a build add-in
@@ -126,7 +143,7 @@ publish/
 # Publish Web Output
 *.[Pp]ublish.xml
 *.azurePubxml
-# TODO: Comment the next line if you want to checkin your web deploy settings
+# TODO: Comment the next line if you want to checkin your web deploy settings 
 # but database connection strings (with potential passwords) will be unencrypted
 *.pubxml
 *.publishproj
@@ -136,8 +153,8 @@ publish/
 # The packages folder can be ignored because of Package Restore
 **/packages/*
 # except build/, which is used as an MSBuild target.
-!**/packages/build/
-# If using the old MSBuild-Integrated Package Restore, uncomment this:
+#!**/packages/build/
+# Uncomment if necessary however generally it will be regenerated when needed
 #!**/packages/repositories.config
 
 # Windows Azure Build Output
@@ -147,11 +164,15 @@ csx/
 # Windows Store app package directory
 AppPackages/
 
+# Visual Studio cache files
+# files ending in .cache can be ignored
+*.[Cc]ache
+# but keep track of directories ending in .cache
+!*.[Cc]ache/
+
 # Others
-sql/
-*.Cache
 ClientBin/
-[Ss]tyle[Cc]op.*
+#[Ss]tyle[Cc]op.*
 ~$*
 *~
 *.dbmdl
@@ -159,6 +180,7 @@ ClientBin/
 *.pfx
 *.publishsettings
 node_modules/
+orleans.codegen.cs
 
 # RIA/Silverlight projects
 Generated_Code/
@@ -182,3 +204,51 @@ UpgradeLog*.htm
 
 # Microsoft Fakes
 FakesAssemblies/
+
+# Node.js Tools for Visual Studio
+.ntvs_analysis.dat
+
+# Visual Studio 6 build log
+*.plg
+
+# Visual Studio 6 workspace options file
+*.opt
+
+# build script output
+build.txt
+
+service/.nuget
+*.lnk
+*.opendb
+
+# some leaptest wix scripts & assemblies
+/Main/scripts/installer/controllerFragments.wxs
+/Main/scripts/installer/studioFragments.wxs
+/Main/scripts/installer/agentFragments.wxs
+/Main/scripts/installer/LeapTest.Installer.CustomActions.dll
+/Main/scripts/installer/LeapTest.Installer.CustomActions.CA.dll
+
+# msi output folder
+Main/scripts/output/
+
+# vc++ code parsing db (used by visual studio)
+Main/LeapTest.VC.db
+
+.DS_Store
+/Main/LeapTest.AutomationStudio/nlog.DESKTOP-9710FGD.config
+/Main/LeapTest.AutomationController/nlog.DESKTOP-9710FGD.config
+
+# f# fake temp files
+.fake/
+
+__x_intermediate/
+native/output/
+
+# ignore exe, dll & pdb
+*.exe
+*.dll
+*.pdb
+/Archive/Leaptest.SplashSceen.Acrylic/README.md
+/Archive/Leaptest.SplashSceen.Acrylic/Acrylic.png
+/Main/LeapTest.DemoDesktop/app.manifest
+/Main/LeapTest.DB.Manager/Helpers/DeveloperHelper.cs

@@ -61,7 +61,8 @@ namespace ChartApp
 
         #region Button handlers
 
-        private void btnCpu_Click(object sender, EventArgs e)
+        private void 
+            btnCpu_Click(object sender, EventArgs e)
         {
             _toggleActors[CounterType.Cpu].Tell(new ButtonToggleActor.Toggle());
         }
